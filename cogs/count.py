@@ -14,7 +14,7 @@ class count(commands.Cog): #定義class並繼承Cog
     async def setchannnel(self, interaction:Interaction, channel:Optional[TextChannel] = SlashOption(name="頻道", description="選擇一個頻道", required=True)):
         with open("config.json","r") as f: #讀取json
             data = json.load(f)
-        data["Gamechannel"] = channel.id #將遊戲頻道的ID寫入至config.json
+        data["GamechannelID"] = channel.id #將遊戲頻道的ID寫入至config.json
         with open("config.json","w") as f: #寫入json
             json.dump(data,f)
         success_embed = Embed(title="✅ | 設定成功!",description=f"你可以在 {channel.mention} 遊玩了!",colour=nextcord.Colour.green())

@@ -23,5 +23,5 @@ for file in os.listdir('./cogs'):  # 抓取所有cog資料夾裡的檔案
 with open("config.json","r") as f: #讀取cconfig.json
     data = json.load(f)
 if __name__ == "__main__":
-    token = data["token"] #定義token
+    token = data["TOKEN"] #定義token
     bot.run(token)
