@@ -1,4 +1,5 @@
 import nextcord
+import ast
 from nextcord.ext import commands
 from nextcord import Interaction,TextChannel,SlashOption,Embed
 from typing import Optional
@@ -29,7 +30,7 @@ class count(commands.Cog): #定義class並繼承Cog
         with open("config.json","r") as f: #讀取json
             data = json.load(f)
         if message.channel.id == data["Gamechannel"]: #偵測發送訊息的頻道是否為剛設定的頻道
-            content = eval(message.content) #讓算式也可以被偵測
+            content = ast.literal_eval(message.content) #讓算式也可以被偵測
             if int(content) == self.count: #判定目前數字是否跟發送的一樣
                 await message.add_reaction("✅") #添加反應
                 self.count += 1
