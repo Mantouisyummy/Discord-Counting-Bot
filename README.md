@@ -7,11 +7,12 @@
 
 2.接著到config.json中設定
 * `TOKEN` - 你的Discord機器人Token
-* `GamechannelID` - 遊戲功能的頻道ID，可使用斜線指令來設定  
+* `GamechannelID` - 遊戲功能的頻道ID，可使用斜線指令來設定
+* `WEBHOOK_URL` - 遊玩頻道webhook的網址 (https://banka.com.tw/what-is-webhook-and-how-to-create-webhooks-for-your-discord-server/)
 
 3.接著運行機器人  
 
-`python bot.py`
+`python main.py`
 > 現在，你可以開始使用這個機器人了!
 
  
